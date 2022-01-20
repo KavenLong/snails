@@ -3,7 +3,7 @@ module.exports = {
   keywords: '前端开发',
   description: '技术笔录',
   repo: 'https://github.com/zeroonbush/blog.git',  //仓库地址
-  base: '/snails-blog/',  // 配合部署项目
+  base: '/snails/',  // 配合部署项目
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
