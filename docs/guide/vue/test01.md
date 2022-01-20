@@ -2,5 +2,6 @@
 ```ts
 export interface Test {
   name: 'test';
+  age: '18';
 }
 ```
