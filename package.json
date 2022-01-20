@@ -1,0 +1,16 @@
+{
+  "name": "snails",
+  "version": "1.0.0",
+  "description": "blog",
+  "main": "index.js",
+  "author": "Kaven",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "deploy": "bash deploy.sh"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.9.7"
+  }
+}
