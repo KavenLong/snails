@@ -2,7 +2,7 @@
 home: true
 heroImage: /img/banner.png
 heroText: 奔跑的蜗牛
-tagline: 个人成长笔录
+tagline: 蜗牛成长笔录
 actionText: 查看笔录 →
 actionLink: /guide/vue/test01
 features:
