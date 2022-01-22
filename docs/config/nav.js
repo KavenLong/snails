@@ -7,7 +7,7 @@ const navList = [ //导航栏
     text: '前端',
     items: [{
       text: 'TypeScript整理',
-      link: '/guide/typescript/typescript'
+      link: '/guide/typescript-finishing/introduction'
     }]
   },
   {
@@ -30,11 +30,15 @@ const navList = [ //导航栏
     link: '/react_docs/'
   },
   {
+    text: 'DevOps',
+    link: '/react_docs/'
+  },
+  {
     text: '问题收录',
     link: '/react_docs/'
   },
   {
-    text: 'DevOps',
+    text: '面试秘籍',
     link: '/react_docs/'
   },
   {

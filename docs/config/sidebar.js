@@ -1,4 +1,15 @@
 const sidebarList = { //侧边拦，对应导航中的link文件夹路径，注意这里是 ‘/’结束
+  '/guide/typescript-finishing/': [{
+    title: 'TypeScript',
+    collapsable: false,
+    children: [{
+      title: 'TypeScript介绍',
+      path: 'introduction'
+    }, {
+      title: 'TypeScript整理',
+      path: 'typescriptFinishing'
+    }]
+  }],
   '/guide/build-tools/build-webpack/': [{
     title: 'webpack项目构建',
     collapsable: false,
