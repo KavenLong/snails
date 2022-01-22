@@ -3,7 +3,7 @@ const sidebarList = { //侧边拦，对应导航中的link文件夹路径，注�
     title: 'TypeScript',
     collapsable: false,
     children: [{
-      title: 'TypeScript介绍',
+      title: 'TypeScript简介',
       path: 'introduction'
     }, {
       title: 'TypeScript整理',
