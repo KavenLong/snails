@@ -12,6 +12,9 @@ module.exports = {
     ['link', { rel: 'icon', href: '/favicon.ico' }]
   ],
   lastUpdated: 'Last Updated',
+  markdown: {
+    lineNumbers: true
+  },
   plugins: [['one-click-copy', {
     copyMessage: '复制成功',
     toolTipMessage: '剪切成功',
@@ -21,6 +24,9 @@ module.exports = {
     author: 'Kaven',
     logo: '/img/logo.png',
     nav: navList,
-    sidebar: sidebarList
+    sidebar: sidebarList,
+    footer: {
+      copyrightInfo: 'Kaven'
+    }
   }
 }

@@ -7,7 +7,7 @@ const navList = [ //导航栏
     text: '前端',
     items: [{
       text: 'TypeScript整理',
-      link: '/guide/typescript-finishing/introduction'
+      link: '/typescript/introduction'
     }]
   },
   {
@@ -16,11 +16,11 @@ const navList = [ //导航栏
       text: '构建工具',
       items: [{
           text: 'Webpack',
-          link: '/guide/build-tools/build-webpack/webpack'
+          link: '/build-tools/build-webpack/webpack'
         },
         {
           text: 'Vite',
-          link: '/guide/build-tools/build-vite/vite'
+          link: '/build-tools/build-vite/vite'
         }
       ]
     }],
