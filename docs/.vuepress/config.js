@@ -28,6 +28,12 @@ module.exports = {
     sidebar: sidebarList,
     footer: {
       copyrightInfo: 'Kaven'
-    }
+    },
+    // 博主信息 (显示在首页侧边栏)
+    blogger: {
+      avatar: '/snails/img/author.jpg',
+      name: 'Kaven Long',
+      slogan: '人生这条路怎么选都有遗憾 何不拼一把',
+    },
   }
 }
