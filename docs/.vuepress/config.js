@@ -5,11 +5,12 @@ module.exports = {
   theme: 'vdoing',
   title: '奔跑的蜗牛',
   keywords: '前端开发',
-  description: '技术笔录',
+  description: '前端技术笔录',
   repo: 'https://github.com/KavenLong?tab=repositories',
   base: '/snails/',
   head: [
-    ['link', { rel: 'icon', href: '/favicon.ico' }]
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    ['meta', { name: 'keywords', content: '前端技术笔录'}]
   ],
   lastUpdated: 'Last Updated',
   markdown: {
