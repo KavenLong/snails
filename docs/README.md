@@ -1,8 +1,8 @@
 ---
 home: true
 # heroImage: /img/banner.png
-heroText: 奔跑的蜗牛
-tagline: 蜗牛成长笔录
+heroText: Kaven's Blog
+tagline: Kaven成长笔录
 actionText: 查看笔录 →
 actionLink: /typescript/introduction
 features:

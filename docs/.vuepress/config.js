@@ -3,14 +3,14 @@ const { sidebarList } = require('../config/sidebar');
 
 module.exports = {
   theme: 'vdoing',
-  title: '蜗牛成长笔录',
+  title: "Kaven's Blog",
   keywords: '前端开发',
-  description: '蜗牛成长笔录',
+  description: "Kaven's Blog",
   repo: 'https://github.com/KavenLong?tab=repositories',
   base: '/snails/',
   head: [
     ['link', { rel: 'icon', href: '/favicon.ico' }],
-    ['meta', { name: 'keywords', content: '蜗牛成长笔录'}]
+    ['meta', { name: 'keywords', content: "Kaven's Blog"}]
   ],
   lastUpdated: 'Last Updated',
   markdown: {
