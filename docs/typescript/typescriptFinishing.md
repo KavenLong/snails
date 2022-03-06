@@ -167,6 +167,9 @@ function neverReach(): never {
   throw new Error("an error");
 }
 ```
+::: tip 思考
+never 和 void 的区别 void 可以被赋值为 null 和 undefined 的类型。never 则是一个不包含值的类型。拥有 void 返回值类型的函数能正常运行。拥有 never 返回值类型的函数无法正常返回，无法终止，或会抛出异常。
+:::
 13. BigInt 大数类型
 
 使用 BigInt 可以安全地存储和操作大整数 我们在使用 BigInt 的时候 必须添加 ESNext 的编译辅助库 需要在 tsconfig.json 的 libs 字段加上ESNext要使用1n需要 "target": "ESNext"number 和 BigInt 类型不一样 不兼容
@@ -636,6 +639,9 @@ let animal = new Animal(); //直接报错 无法创建抽象类的实例
 let cat = new Cat();
 cat.speak();
 ```
+::: tip 思考
+重写(override)和重载(overload)的区别
+:::
 「重写」是指子类重写继承自父类中的方法「重载」是指为同一个函数提供多个类型定义
 ```ts
 class Animal {
@@ -665,6 +671,9 @@ function double(val: any): any {
 let r = double(1);
 console.log(r);
 ```
+::: tip 思考
+什么是「多态」
+:::
 在父类中定义一个方法，在子类中有多个实现，在程序运行的时候，根据不同的对象执行不同的操作，实现运行时的绑定。
 ```ts
 abstract class Animal {
