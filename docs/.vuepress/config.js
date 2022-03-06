@@ -33,7 +33,7 @@ module.exports = {
     blogger: {
       avatar: '/snails/img/author.jpg',
       name: 'Kaven Long',
-      slogan: '人生这条路怎么选都有遗憾 何不拼一把',
+      slogan: '当年写过的bug 可都是别人的青春',
     },
   }
 }
