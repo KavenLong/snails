@@ -41,19 +41,19 @@ ts-node index.ts
 tsc --watch index.ts
 ```
 ## 二、 TS 类型
-1. 布尔类型(boolean)
+### 1. 布尔类型(boolean)
 ```ts
 const flag: boolean = true;
 ```
-2. Number 类型
+### 2. Number 类型
 ```ts
 const flag: number = 1;
 ```
-3. String 类型
+### 3. String 类型
 ```ts
 const flag: string = "hello";
 ```
-4. Enum 类型
+### 4. Enum 类型
 
 使用枚举我们可以很好的描述一些特定的业务场景，比如一年中的春、夏、秋、冬，还有每周的周一到周天，还有各种颜色，以及可以用它来描述一些状态信息，比如错误码等
 ```ts
@@ -100,18 +100,18 @@ const color: Color[] = [Color.RED, Color.PINK, Color.BLUE];
 var color = [0 /* RED */ , 1 /* PINK */ , 2 /* BLUE */ ];
 // 可以看到我们的枚举并没有被编译成js代码 只是把color这个数组变量编译出来了
 ```
-5. 数组类型(array)
+### 5. 数组类型(array)
 ```ts
 const flag1: number[] = [1, 2, 3];
 const flag2: Array<number> = [1, 2, 3];
 ```
-6. 元组类型(tuple)
+### 6. 元组类型(tuple)
 
 在 TypeScript 的基础类型中，元组（ Tuple ）表示一个已知「数量」和「类型」的数组 其实可以理解为他是一种特殊的数组
 ```ts
 const flag: [string, number] = ["hello", 1];
 ```
-7. Symbol
+### 7. Symbol
 
 我们在使用 Symbol 的时候，必须添加 es6 的编译辅助库 需要在 tsconfig.json 的 libs 字段加上ES`2015`Symbol 的值是唯一不变的
 ```ts
@@ -119,7 +119,7 @@ const sym1 = Symbol("hello");
 const sym2 = Symbol("hello");
 console.log(Symbol("hello") === Symbol("hello"));
 ```
-8.  任意类型(any)
+### 8.  任意类型(any)
 
 任何类型都可以被归为 any 类型 这让 any 类型成为了类型系统的 顶级类型 (也被称作 全局超级类型) TypeScript 允许我们对 any 类型的值执行任何操作 而无需事先执行任何形式的检查
 
@@ -127,14 +127,14 @@ console.log(Symbol("hello") === Symbol("hello"));
 ```ts
 const flag: any = document.getElementById("root");
 ```
-9. null 和 undefined
+### 9. null 和 undefined
 
 undefined 和 null 两者有各自的类型分别为 undefined 和 null
 ```ts
 let u: undefined = undefined;
 let n: null = null;
 ```
-10. Unknown 类型
+### 10. Unknown 类型
 
 unknown 和 any 的主要区别是 unknown 类型会更加严格 在对 unknown 类型的值执行大多数操作之前 我们必须进行某种形式的检查 而在对 any 类型的值执行操作之前 我们不必进行任何检查 所有类型都可以被归为 unknown 但unknown类型只能被赋值给 any 类型和 unknown 类型本身 而 any 啥都能分配和被分配
 ```ts
@@ -153,13 +153,13 @@ let value4: number = value; // Error
 let value5: string = value; // Error
 let value6: object = value; // Error
 ```
-11.  void 类型
+### 11.  void 类型
 
 void 表示没有任何类型 当一个函数没有返回值时 TS 会认为它的返回值是 void 类型。
 ```ts
 function hello(name: string): void {}
 ```
-12. never 类型
+### 12. never 类型
 
 never 一般表示用户无法达到的类型 例如never 类型是那些总是会抛出异常或根本就不会有返回值的函数表达式或箭头函数表达式的返回值类型
 ```ts
@@ -170,7 +170,7 @@ function neverReach(): never {
 ::: tip 思考
 never 和 void 的区别 void 可以被赋值为 null 和 undefined 的类型。never 则是一个不包含值的类型。拥有 void 返回值类型的函数能正常运行。拥有 never 返回值类型的函数无法正常返回，无法终止，或会抛出异常。
 :::
-13. BigInt 大数类型
+### 13. BigInt 大数类型
 
 使用 BigInt 可以安全地存储和操作大整数 我们在使用 BigInt 的时候 必须添加 ESNext 的编译辅助库 需要在 tsconfig.json 的 libs 字段加上ESNext要使用1n需要 "target": "ESNext"number 和 BigInt 类型不一样 不兼容
 ```ts
@@ -185,7 +185,7 @@ let bar: bigint;
 foo = bar; //error
 bar = foo; //error
 ```
-14. object, Object 和 {} 类型
+### 14. object, Object 和 {} 类型
 
 「object」 类型用于表示非原始类型
 ```ts
@@ -217,7 +217,7 @@ simpleCase = null; // error
 simpleCase = undefined; // error
 simpleCase = {}; // ok
 ```
-15. 类型推论
+### 15. 类型推论
 
 指编程语言中能够自动推导出值的类型的能力 它是一些强静态类型语言中出现的特性 定义时未赋值就会推论成 any 类型 如果定义的时候就赋值就能利用到类型推论
 ```ts
@@ -225,7 +225,7 @@ let flag; //推断为any
 let count = 123; //为number类型
 let hello = "hello"; //为string类型
 ```
-16. 联合类型
+### 16. 联合类型
 
 联合类型（Union Types）表示取值可以为多种类型中的一种 未赋值时联合类型上只能访问两个类型共有的属性和方法
 ```ts
@@ -236,7 +236,7 @@ console.log(name.toFixed(2));
 name = "hello";
 console.log(name.length);
 ```
-17. 类型断言
+### 17. 类型断言
 
 有时候你会遇到这样的情况，你会比 TypeScript 更了解某个值的详细信息。通常这会发生在你清楚地知道一个实体具有比它现有类型更确切的类型。其实就是你需要手动告诉 ts 就按照你断言的那个类型通过编译（这一招很关键 有时候可以帮助你解决很多编译报错）
 
@@ -259,7 +259,7 @@ let flag: null | undefined | string;
 flag!.toString(); // ok
 flag.toString(); // error
 ```
-18. 字面量类型
+### 18. 字面量类型
 
 在 TypeScript 中，字面量不仅可以表示值，还可以表示类型，即所谓的字面量类型。目前，TypeScript 支持 3 种字面量类型：字符串字面量类型、数字字面量类型、布尔字面量类型，对应的字符串字面量、数字字面量、布尔字面量分别拥有与其值一样的字面量类型，具体示例如下：
 ```ts
@@ -267,7 +267,7 @@ let flag1: "hello" = "hello";
 let flag2: 1 = 1;
 let flag3: true = true;
 ```
-19. 类型别名
+### 19. 类型别名
 
 类型别名用来给一个类型起个新名字
 ```ts
@@ -275,7 +275,7 @@ type flag = string | number;
 
 function hello(value: flag) {}
 ```
-20. 交叉类型
+### 20. 交叉类型
 
 交叉类型是将多个类型合并为一个类型。通过 & 运算符可以将现有的多种类型叠加到一起成为一种类型，它包含了所需的所有类型的特性
 ```ts
@@ -288,7 +288,7 @@ let flag3: Flag2 = {
   henb,
 };
 ```
-21. 类型保护
+### 21. 类型保护
 
 类型保护就是一些表达式，他们在编译的时候就能通过类型信息确保某个作用域内变量的类型 其主要思想是尝试检测属性、方法或原型，以确定如何处理值
 
@@ -358,7 +358,7 @@ function fn(x: string | object) {
 }
 ```
 ## 三、 函数
-1.  函数的定义
+### 1.  函数的定义
 
 可以指定参数的类型和返回值的类型
 ```ts
@@ -367,7 +367,7 @@ function hello(name: string): void {
 }
 hello("hahaha");
 ```
-2. 函数表达式
+### 2. 函数表达式
 
 定义函数类型
 ```ts
@@ -377,7 +377,7 @@ let countNumber: SumFunc = function (a, b) {
   return a + b;
 };
 ```
-3. 可选参数
+### 3. 可选参数
 
 在 TS 中函数的形参和实参必须一样，不一样就要配置可选参数,而且必须是「最后一个参数」
 ```ts
@@ -386,21 +386,21 @@ function print(name: string, age?: number): void {
 }
 print("hahaha");
 ```
-4. 默认参数
+### 4. 默认参数
 ```ts
 function ajax(url: string, method: string = "GET") {
   console.log(url, method);
 }
 ajax("/users");
 ```
-5. 剩余参数
+### 5. 剩余参数
 ```ts
 function sum(...numbers: number[]) {
   return numbers.reduce((val, item) => (val += item), 0);
 }
 console.log(sum(1, 2, 3));
 ```
-6. 函数重载
+### 6. 函数重载
 
 函数重载或方法重载是使用相同名称和不同参数数量或类型创建多个方法的一种能力。在 TypeScript 中，表现为给同一个函数提供多个函数类型定义
 ```ts
@@ -423,7 +423,7 @@ console.log(obj);
 函数重载真正执行的是同名函数最后定义的函数体 在最后一个函数体定义之前全都属于函数类型定义 不能写具体的函数实现方法 只能定义类型
 :::
 ## 四、 类
-1. 类的定义
+### 1. 类的定义
 
 在 TypeScript 中，我们可以通过 Class 关键字来定义一个类
 ```ts
@@ -465,7 +465,7 @@ let com = Component; //这里是代表构造函数
 let c: Component = new Component(); //这里是代表实例类型
 let f: typeof Component = com;
 ```
-2. 存取器
+### 2. 存取器
 
 在 TypeScript 中，我们可以通过存取器来改变一个类中属性的读取和赋值行为
 ```ts
@@ -508,7 +508,7 @@ var user = new User("hello");
 user.name = "world";
 console.log(user.name);
 ```
-3. readonly 只读属性
+### 3. readonly 只读属性
 
 readonly 修饰的变量只能在「构造函数」中初始化 TypeScript 的类型系统同样也允许将 interface、type、 class 上的属性标识为 readonly readonly 实际上只是在编译阶段进行代码检查。
 ```ts
@@ -524,7 +524,7 @@ class Animal {
 
 let a = new Animal("hello");
 ```
-4. 继承
+### 4. 继承
 
 子类继承父类后子类的实例就拥有了父类中的属性和方法，可以增强代码的可复用性
 
@@ -562,7 +562,7 @@ class Student extends Person {
 let s1 = new Student("hello", 10, 1);
 console.log(s1);
 ```
-5. 类里面的修饰符
+### 5. 类里面的修饰符
 
 「public」 类里面 子类 其它任何地方外边都可以访问「protected」 类里面 子类 都可以访问,其它任何地方不能访问「private」 类里面可以访问，子类和其它任何地方都不可以访问
 ```ts
@@ -597,7 +597,7 @@ console.log(child.name);
 console.log(child.age); //age访问不到 会报错
 console.log(child.car); //car访问不到 会报错
 ```
-6. 静态属性 静态方法
+### 6. 静态属性 静态方法
 
 类的静态属性和方法是直接定义在类本身上面的 所以也只能通过直接调用类的方法和属性来访问
 ```ts
@@ -616,7 +616,7 @@ class Parent {
 console.log(Parent.mainName);
 console.log(Parent.getmainName());
 ```
-7. 抽象类和抽象方法
+### 7. 抽象类和抽象方法
 
 抽象类，无法被实例化，只能被继承并且无法创建抽象类的实例 子类可以对抽象类进行不同的实现
 
@@ -701,7 +701,7 @@ animals.forEach((i) => {
 接口既可以在面向对象编程中表示为行为的抽象，也可以用来描述对象的形状
 
 我们用 interface 关键字来定义接口 在接口中可以用分号或者逗号分割每一项，也可以什么都不加
-1. 对象的形状
+### 1. 对象的形状
 ```ts
 //接口可以用来描述`对象的形状`
 //接口可以用来描述`对象的形状`
@@ -718,7 +718,7 @@ let speakman: Speakable = {
   age: 111, //多属性也会报错
 };
 ```
-2. 行为的抽象
+### 2. 行为的抽象
 
 接口可以把一些类中共有的属性和方法抽象出来,可以用来约束实现此接口的类
 
@@ -741,7 +741,7 @@ class Person implements Speakable, Eatable {
   //   eat() {} //需要实现的接口包含eat方法 不实现会报错
 }
 ```
-3. 定义任意属性
+### 3. 定义任意属性
 
 如果我们在定义接口的时候无法预先知道有哪些属性的时候,可以使用 [propName:string]:any,propName 名字是任意的
 ```ts
@@ -759,7 +759,7 @@ let p1 = {
 ```
 这个接口表示 必须要有 id 和 name 这两个字段 然后还可以新加其余的未知字段
 
-4. 接口的继承
+### 4. 接口的继承
 
 我们除了类可以继承 接口也可以继承 同样的使用 extends关键字
 ```ts
@@ -778,7 +778,7 @@ class Person implements SpeakChinese {
   }
 }
 ```
-5. 函数类型接口
+### 5. 函数类型接口
 
 可以用接口来定义函数类型
 ```ts
@@ -789,7 +789,7 @@ let cost: discount = function (price: number): number {
   return price * 0.8;
 };
 ```
-6. 构造函数的类型接口
+### 6. 构造函数的类型接口
 
 使用特殊的 new()关键字来描述类的构造函数类型
 ```ts
@@ -917,7 +917,7 @@ function createArray<T>(length: number, value: T): Array<T> {
 createArray<string>(3, "x"); // ['x', 'x', 'x']
 ```
 我们可以使用<>的写法 然后再面传入一个变量 T 用来表示后续函数需要用到的类型 当我们真正去调用函数的时候再传入 T 的类型就可以解决很多预先无法确定类型相关的问题
-1. 多个类型参数
+### 1. 多个类型参数
 
 如果我们需要有多个未知的类型占位 那么我们可以定义任何的字母来表示不同的类型参数
 
@@ -928,7 +928,7 @@ function swap<T, U>(tuple: [T, U]): [U, T] {
 
 swap([7, "seven"]); // ['seven', 7]
 ```
-2. 泛型约束
+### 2. 泛型约束
 
 在函数内部使用泛型变量的时候，由于事先不知道它是哪种类型，所以不能随意的操作它的属性或方法：
 ```ts
@@ -955,7 +955,7 @@ function loggingIdentity<T extends Lengthwise>(arg: T): T {
 ::: warning
 我们在泛型里面使用extends关键字代表的是泛型约束 需要和类的继承区分开
 :::
-3. 泛型接口
+### 3. 泛型接口
 
 定义接口的时候也可以指定泛型
 ```ts
@@ -969,7 +969,7 @@ console.log(cart.list[0].name, cart.list[0].price);
 ```
 我们定义了接口传入的类型 T 之后返回的对象数组里面 T 就是当时传入的参数类型
 
-4. 泛型类
+### 4. 泛型类
 ```ts
 class MyArray<T> {
   private list: T[] = [];
@@ -994,13 +994,13 @@ let ret = arr.getMax();
 console.log(ret);
 ```
 上诉例子我们实现了一个在数组里面添加数字并且获取最大值的泛型类
-5. 泛型类型别名
+### 5. 泛型类型别名
 ```ts
 type Cart<T> = { list: T[] } | T[];
 let c1: Cart<string> = { list: ["1"] };
 let c2: Cart<number> = [1];
 ```
-6. 泛型参数的默认类型
+### 6. 泛型参数的默认类型
 
 我们可以为泛型中的类型参数指定默认类型。当使用泛型时没有在代码中直接指定类型参数，从实际值参数中也无法推测出时，这个默认类型就会起作用
 ```ts
@@ -1013,7 +1013,7 @@ function createArray<T = string>(length: number, value: T): Array<T> {
 }
 ```
 ## 七、 关键词
-1. typeof 关键词
+### 1. typeof 关键词
 
 typeof 关键词除了做类型保护 还可以从实现推出类型
 ```ts
@@ -1031,7 +1031,7 @@ getName(p1);
 ```
 上面的例子就是使用 typeof 获取一个变量的类型
 
-2. keyof 关键词
+### 2. keyof 关键词
 
 keyof 可以用来取得一个对象接口的所有 key 值
 ```ts
@@ -1049,7 +1049,7 @@ function getValueByKey(p: Person, key: PersonKey) {
 let val = getValueByKey({ name: "hello", age: 10, gender: "male" }, "name");
 console.log(val);
 ```
-3. 索引访问操作符
+### 3. 索引访问操作符
 
 使用 [] 操作符可以进行索引访问
 ```ts
@@ -1060,7 +1060,7 @@ interface Person {
 
 type x = Person["name"]; // x is string
 ```
-4. 映射类型 in
+### 4. 映射类型 in
 
 在定义的时候用 in 操作符去批量定义类型中的属性
 ```ts
@@ -1076,7 +1076,7 @@ type PartPerson = {
 
 let p1: PartPerson = {};
 ```
-5. infer 关键字
+### 5. infer 关键字
 
 在条件类型语句中，可以用 infer 声明一个类型变量并且对它进行使用。
 ```ts
@@ -1235,7 +1235,7 @@ type UserWithoutEmail = Omit<User, "email">; // UserWithoutEmail ={id: string;na
 
 使用@装饰器的写法需要把 tsconfig.json 的 experimentalDecorators 字段设置为 true
 
-1. 类装饰器
+### 1. 类装饰器
 
 类装饰器在类声明之前声明，用来监视、修改或替换类定义
 ```ts
@@ -1300,7 +1300,7 @@ namespace c {
   p.eat();
 }
 ```
-2. 属性装饰器
+### 2. 属性装饰器
 
 属性装饰器表达式会在运行时当作函数被调用，传入 2 个参数 第一个参数对于静态成员来说是类的构造函数，对于实例成员是类的原型对象 第二个参数是属性的名称
 ```ts
@@ -1333,7 +1333,7 @@ let p: Person = new Person();
 p.name = "world";
 console.log(p.name);
 ```
-3. 方法装饰器
+### 3. 方法装饰器
 
 方法装饰器顾名思义，用来装饰类的方法。它接收三个参数：target: Object - 对于静态成员来说是类的构造函数，对于实例成员是类的原型对象 propertyKey: string | symbol - 方法名 descriptor: TypePropertyDescript - 属性描述符
 ```ts
@@ -1379,7 +1379,7 @@ for (let attr in p) {
 p.getName();
 console.log(p.sum("1", "2", "3"));
 ```
-4. 参数装饰器
+### 4. 参数装饰器
 
 参数装饰器顾名思义，是用来装饰函数参数，它接收三个参数：
 
@@ -1400,7 +1400,7 @@ class Greeter {
 ```
 以上代码成功运行后，控制台会输出以下结果："The parameter in position 0 at Greeter has been decorated"
 
-5. 装饰器执行顺序
+### 5. 装饰器执行顺序
 
 有多个参数装饰器时：从最后一个参数依次向前执行方法和方法参数中参数装饰器先执行。方法和属性装饰器，谁在前面谁先执行。因为参数属于方法一部分，所以参数会一直紧紧挨着方法执行
 
