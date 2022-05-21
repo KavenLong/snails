@@ -6,6 +6,9 @@ const sidebarList = { //侧边拦，对应导航中的link文件夹路径，注�
       title: 'TypeScript简介',
       path: 'introduction'
     }, {
+      title: 'TypeScript规范',
+      path: 'specification'
+    }, {
       title: 'TypeScript整理',
       path: 'typescriptFinishing'
     }]
