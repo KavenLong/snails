@@ -823,6 +823,20 @@ type PartialPoint = PartialPointX | PartialPointY;
 // tuple
 type Data = [number, string];
 
+// map
+type PropsKeys = 'a' | 'b' | 'c'
+type Type = {
+    [Key in PropsKeys]: number
+}
+
+type PropsKeysOne = {
+    label: string
+    value: number
+}
+type TypeOne = {
+    [Key in keyof PropsKeysOne]: number
+}
+
 // dom
 let div = document.createElement("div");
 type B = typeof div;

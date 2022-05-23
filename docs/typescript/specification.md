@@ -3,9 +3,9 @@ title: TypeScript编写规范
 date: 2022-05-21 15:40:49
 permalink: /pages/315b88/
 categories:
-  - Typescript
+  - TypeScript
 tags:
-  - Typescript
+  - TypeScript
 ---
 
 ## 一、背景
