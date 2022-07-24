@@ -16,6 +16,12 @@ yarn install
 yarn dev
 ```
 
+## Build
+
+```
+yarn build
+```
+
 ## Deploy
 
 ```
