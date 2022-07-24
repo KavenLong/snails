@@ -15,12 +15,20 @@ const navList = [ //导航栏
     items: [{
       text: '构建工具',
       items: [{
-          text: 'Webpack',
-          link: '/build-tools/build-webpack/webpack'
-        },
+        text: 'Webpack',
+        link: '/build-tools/build-webpack/webpack'
+      },
+      {
+        text: 'Vite',
+        link: '/build-tools/build-vite/vite'
+      }
+      ]
+    }, {
+      text: '管理工具',
+      items: [
         {
-          text: 'Vite',
-          link: '/build-tools/build-vite/vite'
+          text: 'Bit',
+          link: '/bit/bit'
         }
       ]
     }],

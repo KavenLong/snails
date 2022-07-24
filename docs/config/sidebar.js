@@ -29,6 +29,14 @@ const sidebarList = { //侧边拦，对应导航中的link文件夹路径，注�
       path: 'vite'
     }]
   }],
+  '/bit/': [{
+    title: 'Bit',
+    collapsable: false,
+    children: [{
+      title: 'Bit 私有化部署',
+      path: 'bit'
+    }]
+  }],
   '/': ['']
 }
 
